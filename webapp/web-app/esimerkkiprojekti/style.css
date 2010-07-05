@@ -1,0 +1,30 @@
+body, p, div, tr, td, a {
+	font-family : "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 110%;
+	background: #f7f7f7;
+}
+div {
+	background: #3b5998;
+	height: 45px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	width: 500px;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+p {
+text-align: center;
+}
+a {
+	font-size: 140%;
+	padding: 3px;
+	background: #3b5998;
+	color: white;
+	
+}
+a:hover {
+	background: #5c75aa;
+	
+}

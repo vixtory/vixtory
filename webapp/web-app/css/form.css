@@ -1,0 +1,178 @@
+.maintable {
+   border: none;
+   font-size: 12px;
+   border-collapse: collapse;
+}
+
+.maintable td{
+   vertical-align: top;
+   padding-left: 0px;
+   padding-top: 20px;
+   border-bottom: 1px solid black;
+}
+
+.maintable th{
+   padding-left: 0px;
+}
+
+p, div, tr, td {
+	font-family : Verdana, Serif;
+}
+
+body.welcome {
+	padding-left: 20px;
+	padding-top: 10px;
+}
+span.a {
+	font-size: 120%;
+
+}
+span.a, span.b {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+span.a:hover, span.b:hover {
+	background: #EEEEFF;
+}
+
+img.logo {
+	width: 200px;
+}
+p.req {
+	background: #F8F8F8;
+	font-size: 100%;
+}
+li {
+	font-weight: bold;
+	font-size: 110%;
+}
+.reqtext {
+	background: #F8F8F8;
+}
+.left {
+	width: 200px;
+}
+#versiontable th {
+        font-size: 90%;
+        text-align: center;
+}
+#versiontable td {
+        text-align: center;
+        font-size: 80%;
+}
+
+h3 { 
+  text-align: center;
+}
+
+#viewhead {
+   position: relative; 
+   margin-left: auto; 
+   margin-right: auto;
+   width: 600px;
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#head {
+   font-weight: bold; 
+   text-align: center;
+}
+
+.viewtext {
+   font-size: 80%;
+}
+
+div.forms label {
+	float:left;
+	font-size:12px;
+	width:100px;
+}
+
+div.forms input, select, textarea {
+	margin:0pt 0pt 7px;
+	width: 200px;
+}
+div.forms input {
+	border-color:black;
+	border-style:solid;
+	border-width:1px;
+	font-size:11px;
+}
+
+div.forms .errors {
+	border: 1px solid red;
+}
+
+tr.row1 {
+	background-color: #E8E8E8;
+}
+
+.spefData {
+   border: none;
+   border-collapse: collapse;
+}
+
+.spefData td {
+   vertical-align: top;
+   padding-left: 0px;
+   padding-right: 0px;
+   padding-top: 0px;
+   border: none;
+}
+
+.vershead {
+   padding-top: 10px;
+   font-weight: bold;
+}
+
+.projectCell{
+   width: 300px;
+}
+
+.plusMinusCell{
+   width: 20px;
+}
+
+div.errorMessage {
+    width: 600px;
+    margin-bottom: 1em;
+    padding: 10px;
+    padding-left: 35px;
+    background: #ffcccc url(../images/forbidden.gif) 8px 8px no-repeat;
+}
+
+table.edit {
+    width: 700px;
+    border: none;
+    border-collapse: collapse;
+}
+
+table.edit th, table.edit td {
+    margin: 0;
+    padding: 0;
+}
+
+table.edit ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+table.edit li {
+
+}
+
+table.edit th {
+    font-weight: bold;
+    background-image: none;
+    width: 150px;
+}
+
+table.edit input, table.edit textarea {
+    width: 300px;
+}

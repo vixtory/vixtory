@@ -1,0 +1,10 @@
+<plugin name='stark-security' version='0.4.2'>
+  <author>Ola Bildtsen</author>
+  <authorEmail>info@bildtsen.com</authorEmail>
+  <title>A robust, convention-based implementation of Spring Security for Grails</title>
+  <documentation>http://grails.org/Stark+Security+Plugin</documentation>
+  <resources>
+    <resource>UrlMappings</resource>
+  </resources>
+  <dependencies />
+</plugin>

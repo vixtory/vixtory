@@ -1,0 +1,60 @@
+<project name="vixtory" default="test">
+
+    <property file="application.properties" />
+     
+    <!-- Viittaus yleiseen skriptitiedostoon -->
+    <property name="deploy-tasks" value="/opt/bamboo-scripts/deploy-tasks.xml" />
+
+    <!-- Viite webapp-hakemistoon build.xml:stä katsoen; CM:ssä jo määritelty -->
+    <property name="webapp_path" value=".tmp/" />
+    <property name="deployuser" value="agiletool" />
+
+    <condition property="grails" value="grails.bat">
+        <os family="windows"/>
+    </condition>
+
+    <property environment="env" />
+    <property name="grails" value="${env.GRAILS_HOME}/bin/grails" environment="e" />
+
+	<!-- ================================= 
+          target: clean              
+         ================================= -->
+    <target name="clean" description="--> Cleans a Grails application">
+		<exec executable="${grails}" failonerror="true">
+			<arg value="clean"/>
+		</exec>                               
+    </target>
+
+	<!-- ================================= 
+          target: war              
+         ================================= -->
+    <target name="war" description="--> Creates a WAR of a Grails application">
+		<exec executable="/bin/bash" failonerror="true">
+			<arg value="bamboo-build.sh"/>
+		</exec>                               
+    </target>
+	
+	<!-- ================================= 
+          target: test              
+         ================================= -->
+    <target name="test" description="--> Run a Grails applications unit tests">
+		<exec executable="${grails}" failonerror="false">
+			<arg value="test-app"/>
+		</exec>                               
+    </target>
+	
+	<!-- ================================= 
+          target: deploy              
+         ================================= -->
+    <!-- deploy-build -kohde projektin asennusta varten -->
+    <target name="deploy" depends="test, war">
+        <ant antfile="${deploy-tasks}" target="stop" />
+        <!-- pura war paketti väliaikaiseen hakemistoon -->
+        <mkdir dir="${webapp_path}" />
+        <unzip dest="${webapp_path}" src="${app.name}-${app.version}.war" />
+        <ant antfile="${deploy-tasks}" target="copy" />
+        <delete dir="${webapp_path}" />
+        <ant antfile="${deploy-tasks}" target="start" />
+    </target>
+
+</project>
